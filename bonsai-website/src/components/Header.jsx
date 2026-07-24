@@ -8,7 +8,7 @@ function Header () {
             />
 
             <nav className="flex gap-8">
-                <ul className="flex gap-4">
+                <ul className="flex items-center gap-4">
                     <li className="flex items-center">
                         Product
                         <img className="h-6" src="./images/angle-down-solid-full.svg" alt="dropdown icon" />
@@ -22,10 +22,10 @@ function Header () {
                 </ul>
 
                 <div className="flex gap-4">
-                    <button>
+                    <button className="text-[#00b289] font-bold border border-[#00b289] px-6 py-2 rounded-md cursor-pointer hover:text-white hover:bg-[#00b289] transition-all duration-150 ease-in-out">
                         LOG IN
                     </button>
-                    <button>
+                    <button className="bg-[#00b289] text-white font-bold px-6 py-2 rounded-md cursor-pointer hover:brightness-90 transition duration-150 ease-in-out">
                         START FREE
                     </button>
                 </div>
