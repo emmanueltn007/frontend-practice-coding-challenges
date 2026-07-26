@@ -9,16 +9,16 @@ function Header () {
 
             <nav className="flex gap-8">
                 <ul className="flex items-center gap-4">
-                    <li className="flex items-center">
+                    <li className="flex items-center cursor-pointer">
                         Product
                         <img className="h-6" src="./images/angle-down-solid-full.svg" alt="dropdown icon" />
                     </li>
-                    <li className="flex items-center">
+                    <li className="flex items-center cursor-pointer">
                         Template
                         <img className="h-6" src="./images/angle-down-solid-full.svg" alt="dropdown icon" />
                     </li>
-                    <li>Pricing</li>
-                    <li>Reviews</li>
+                    <li className="cursor-pointer">Pricing</li>
+                    <li className="cursor-pointer">Reviews</li>
                 </ul>
 
                 <div className="flex gap-4">
