@@ -2,6 +2,10 @@ const pricePlansData = [
     {
         pricePlan: "Starter",
         idealUser: "Ideal for freelancers and contractors just starting out",
+        prices: {
+            monthly: 24,
+            yearly: 17
+        },
         features: [
             "All Templates",
             "Unlimited Clients & Projects",
@@ -12,10 +16,13 @@ const pricePlansData = [
             "Expense Tracking",
             "Up to 5 Project Collaborators"
         ]
-
     },{
         pricePlan: "Professional",
         idealUser: "Everything a growing independent business needs to thrive.",
+        prices: {
+            monthly: 39,
+            yearly: 32
+        },
         features: [
             "Everything in Starter plus...",
             "Custom Branding",
@@ -30,6 +37,10 @@ const pricePlansData = [
     },{
         pricePlan: "Business",
         idealUser: "The perfect package for small businesses and agencies.",
+        prices: {
+            monthly: 79,
+            yearly: 52
+        },
         features: [
             "Everything in Starter and Professional plus...",
             "Subcontractor Management",

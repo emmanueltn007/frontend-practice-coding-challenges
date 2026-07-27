@@ -9,7 +9,7 @@ function PricePlans() {
   }
 
   return (
-    <section>
+    <section className="flex flex-col gap-12">
       <div className="flex items-center justify-center gap-8">
         <h2 className="text-3xl">Plans & Pricing</h2>
 
@@ -37,7 +37,7 @@ function PricePlans() {
         </div>
       </div>
 
-      <PricePlansCards />
+      <PricePlansCards toggleButton={toggleButton} />
     </section>
   );
 }
