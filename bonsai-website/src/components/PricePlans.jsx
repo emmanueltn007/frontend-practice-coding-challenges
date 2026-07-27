@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PricePlansCards from "./PricePlansCards";
+import AddOns from "./AddOns";
 
 function PricePlans() {
   const [toggleButton, setToggleButton] = useState(false);
@@ -38,6 +39,8 @@ function PricePlans() {
       </div>
 
       <PricePlansCards toggleButton={toggleButton} />
+
+      <AddOns toggleButton={toggleButton} />
     </section>
   );
 }
