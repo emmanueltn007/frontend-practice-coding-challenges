@@ -9,19 +9,20 @@ function PricePlansCards({ toggleButton }) {
             key={index}
             className="bg-white border flex flex-col justify-between gap-12 border-[#4c4d5f] rounded-md px-8 py-16"
           >
-            <div className="flex flex-col gap-4">
-              <h3 className="text-2xl">{pricePlan.pricePlan}</h3>
+            <div className="flex flex-col gap-4 text-[#4c4d5f]">
+              <h3 className="text-2xl font-semibold">{pricePlan.pricePlan}</h3>
 
-              <p>{pricePlan.idealUser}</p>
+              <p className="text-sm">{pricePlan.idealUser}</p>
 
-              <div className="border-b-2 border-[#00b289]">
-                <span>$</span>
-                <span className="text-4xl font-bold">
+              <div className="flex gap-2 border-b-2 border-[#00b289] pb-2">
+                <span className="text-2xl">$</span>
+                <span className="text-6xl font-bold">
                   {toggleButton === false
                     ? pricePlan.prices.monthly
                     : pricePlan.prices.yearly}
+
+                  <span className="text-2xl align-sub font-normal">/MONTH</span>
                 </span>
-                <span className="text-2xl">/MONTH</span>
               </div>
 
               <ul className="flex flex-col gap-2">

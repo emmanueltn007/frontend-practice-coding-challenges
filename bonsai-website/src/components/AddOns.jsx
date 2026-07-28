@@ -16,7 +16,7 @@ function AddOns({ toggleButton }) {
 
               <div>
                 <span className="text-4xl">
-                    {toggleButton === false ? addOn.prices.monthly : addOn.prices.yearly}
+                  {toggleButton === false ? addOn.prices.monthly : addOn.prices.yearly}
                 </span>
               </div>
             </div>
