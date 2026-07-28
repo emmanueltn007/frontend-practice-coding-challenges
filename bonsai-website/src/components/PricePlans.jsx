@@ -2,6 +2,7 @@ import { useState } from "react";
 import PricePlansCards from "./PricePlansCards";
 import AddOns from "./AddOns";
 import TogglingSection from "./TogglingSection";
+import CTA from "./CTA";
 
 function PricePlans() {
   const [toggleButton, setToggleButton] = useState(false);
@@ -17,6 +18,8 @@ function PricePlans() {
       <PricePlansCards toggleButton={toggleButton} />
 
       <AddOns toggleButton={toggleButton} />
+
+      <CTA />
     </section>
   );
 }
