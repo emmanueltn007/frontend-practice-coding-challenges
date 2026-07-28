@@ -3,6 +3,7 @@ import PricePlansCards from "./PricePlansCards";
 import AddOns from "./AddOns";
 import TogglingSection from "./TogglingSection";
 import CTA from "./CTA";
+import FAQ from "./FAQ";
 
 function PricePlans() {
   const [toggleButton, setToggleButton] = useState(false);
@@ -20,6 +21,8 @@ function PricePlans() {
       <AddOns toggleButton={toggleButton} />
 
       <CTA />
+
+      <FAQ />
     </section>
   );
 }
