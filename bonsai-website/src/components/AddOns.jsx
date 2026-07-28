@@ -10,9 +10,18 @@ function AddOns({ toggleButton }) {
           return (
             <div key={index} className="bg-white flex justify-between py-8 pl-8 pr-16 rounded-lg">
               <div className="flex flex-col">
-                <h4 className="text-xl font-semibold">{addOn.name}</h4>
-                <p>{addOn.description}</p>
+                <div className="flex flex-col">
+                  <h4 className="text-xl font-semibold">{toggleButton === false ? addOn.name.monthlyName : addOn.name.yearlyName}</h4>
+                  <p>{toggleButton === false ? addOn.description.monthlyDescr : addOn.description.yearlyDescr}</p>
+                </div>
+                {(index === 0 && toggleButton === true || index === 2 && toggleButton === false) && (
+                    <a className="flex items-center" href="#">
+                      LEARN MORE
+                      <img className="h-6 rotate-270" src="./images/angle-down-solid-full.svg" alt="learn more arrow icon" />
+                    </a>
+                )}
               </div>
+
 
               <div>
                 <span className="text-4xl">
