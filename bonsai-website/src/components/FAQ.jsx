@@ -1,12 +1,12 @@
 import { useState } from "react";
 import faqsData from "../utilities/faqs";
 
-function FAQ () {
+function FAQ() {
 
-    const [isClicked, setIsClicked] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(null);
 
-    function handleFAQSection () {
-        setIsClicked(prev => !prev);
+    function handleFAQSection(index) {
+        setIsDropdownOpen(isDropdownOpen === index ? null : index);
     }
 
     return (
@@ -18,17 +18,19 @@ function FAQ () {
             <ul>
                 {faqsData.map((faq, index) => {
                     return (
-                        <li key={index} className="flex justify-between" onClick={() => handleFAQSection()}>
+                        <li key={index} className="flex justify-between" onClick={() => handleFAQSection(index)}>
                             <div>
                                 <span>
-                                {faq.question}
-                            </span>
-                            
-                            <p className={`${isClicked === false && faq === index ? "hidden" : "block"}`} >
-                                {faq.answer}
-                            </p>
+                                    {faq.question}
+                                </span>
+
+                                {isDropdownOpen === index && (
+                                    <p>
+                                        {faq.answer}
+                                    </p>
+                                )}
                             </div>
-                            
+
                             <img className="h-8" src="./images/angle-down-solid-full.svg" alt="FAQ dropdown icon" />
                         </li>
                     );
