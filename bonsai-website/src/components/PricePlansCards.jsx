@@ -2,7 +2,7 @@ import pricePlansData from "../utilities/pricePlansCards";
 
 function PricePlansCards({ toggleButton }) {
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
       {pricePlansData.map((pricePlan, index) => {
         return (
           <div
