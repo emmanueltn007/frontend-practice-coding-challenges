@@ -1,13 +1,13 @@
 function MobileNavMenu ({ isMenuOpen, handleMobileMenuToggle }) {
     return (
         <nav className={`lg:hidden ${isMenuOpen ? "" : ""} `}>
-                <button className="flex flex-col gap-2 cursor-pointer absolute z-30" onClick={() => handleMobileMenuToggle()}>
+                <button className="flex flex-col gap-2 cursor-pointer absolute right-16 top-1/2 -translate-y-1/2 z-40" onClick={() => handleMobileMenuToggle()}>
                     <div className={`w-12 h-1 bg-[#4c4d5f] rounded-md transition-all duration-300 ease-in-out ${isMenuOpen ? "rotate-0" : "translate-y-3 rotate-45"}`}></div>
                     <div className={`w-12 h-1 bg-[#4c4d5f] rounded-md transition-all duration-300 ease-in-out ${isMenuOpen ? "opacity-100" : "opacity-0"}`}></div>
                     <div className={`w-12 h-1 bg-[#4c4d5f] rounded-md transition-all duration-300 ease-in-out ${isMenuOpen ? "rotate-0" : "-translate-y-3 -rotate-45 "}`}></div>
                 </button>
 
-                <div className={`px-16 bg-white w-full h-screen absolute z-30 top-0 translate-y-24 transition-transform duration-150 ease-in-out ${isMenuOpen ? "translate-x-full" : "translate-x-0 left-0"}`}>
+                <div className={`px-16 bg-white w-full h-screen absolute z-40 top-0 translate-y-24 transition-transform duration-150 ease-in-out ${isMenuOpen ? "translate-x-full" : "translate-x-0 left-0"}`}>
                     <ul>
                         <li className="flex items-center cursor-pointer">
                             Product

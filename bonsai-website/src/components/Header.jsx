@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MobileNavMenu from "./MobileNavMenu";
 import DesktopNavMenu from "./DesktopNavMenu";
 
@@ -9,6 +9,18 @@ function Header() {
     function handleMobileMenuToggle() {
         setIsMenuOpen(prev => !prev);
     }
+
+    useEffect(() => {
+        if (!isMenuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+
+        return () => {
+            document.body.style.overflow = "";
+        }
+    }, [isMenuOpen])
 
     return (
         <header className={`bg-white flex items-center justify-between px-16 py-8 sticky top-0 z-10`}>
