@@ -15,7 +15,7 @@ function TogglingSection ({ toggleButton, handleToggleButton }) {
             onClick={() => handleToggleButton()}
           >
             <span
-              className={`bg-white h-6 w-6 absolute left-0 rounded-full -translate-y-1/2 top-1/2 transition-all duration-300 ease-in-out ${toggleButton === false ? "" : "left-full -translate-x-full"}`}
+              className={`bg-white h-6 w-6 absolute left-0 rounded-full -translate-y-1/2 top-1/2 transition-all duration-300 ease-in-out z-5 ${toggleButton === false ? "" : "left-full -translate-x-full"}`}
             ></span>
           </button>
 
