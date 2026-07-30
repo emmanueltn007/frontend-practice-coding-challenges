@@ -1,4 +1,13 @@
+import { useState } from "react";
+
 function Header () {
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    function handleMobileMenuToggle () {
+        setIsMenuOpen(prev => !prev);
+    }
+
     return (
         <header className="bg-white flex items-center justify-between px-16 py-8 sticky top-0 z-50">
             <img 
@@ -7,7 +16,19 @@ function Header () {
                 alt="Bonsai logo" 
             />
 
-            <nav className="flex gap-8">
+            <nav className="lg:hidden">
+                <button className="flex flex-col gap-2 cursor-pointer" onClick={() => handleMobileMenuToggle()}>
+                    <div className={`w-12 h-1 bg-[#4c4d5f] rounded-md transition-all duration-300 ease-in-out ${isMenuOpen ? "rotate-0" : "translate-y-3 rotate-45"}`}></div>
+                    <div className={`w-12 h-1 bg-[#4c4d5f] rounded-md transition-all duration-300 ease-in-out ${isMenuOpen ? "opacity-100" : "opacity-0"}`}></div>
+                    <div className={`w-12 h-1 bg-[#4c4d5f] rounded-md transition-all duration-300 ease-in-out ${isMenuOpen ? "rotate-0" : "-translate-y-3 -rotate-45 "}`}></div>
+                </button>
+
+                <div>
+                    
+                </div>
+            </nav>
+
+            <nav className="flex gap-8 max-lg:hidden">
                 <ul className="flex items-center gap-4">
                     <li className="flex items-center cursor-pointer">
                         Product
