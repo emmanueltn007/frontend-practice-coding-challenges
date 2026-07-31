@@ -10,18 +10,6 @@ function MobileNavMenu ({ isMenuOpen, handleMobileMenuToggle }) {
                 </button>
 
                 <div className={`px-16 bg-white w-full h-screen absolute z-40 top-0 translate-y-24 transition-transform duration-150 ease-in-out ${isMenuOpen ? "translate-x-full" : "translate-x-0 left-0"}`}>
-                    {/* <ul>
-                        <li className="flex items-center cursor-pointer">
-                            Product
-                            <img className="h-6" src="./images/angle-down-solid-full.svg" alt="dropdown icon" />
-                        </li>
-                        <li className="flex items-center cursor-pointer">
-                            Template
-                            <img className="h-6" src="./images/angle-down-solid-full.svg" alt="dropdown icon" />
-                        </li>
-                        <li className="cursor-pointer">Pricing</li>
-                        <li className="cursor-pointer">Reviews</li>
-                    </ul> */}
 
                     <ul>
                         {mobileNavItems.map((mobileNavItem, index) => {
