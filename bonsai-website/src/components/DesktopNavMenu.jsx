@@ -4,14 +4,46 @@ const productListItem = [
 ];
 
 const bonsaiWorkflowSubMenu = [
-    {menuName: "Invoices", description: ""},
-    {menuName: "Proposals", description: ""},
-    {menuName: "Contracts", description: ""},
-    {menuName: "Client CRM", description: ""},
-    {menuName: "Forms & Automations", description: ""},
-    {menuName: "Time Tracking", description: ""},
-    {menuName: "Accounting", description: ""},
-    {menuName: "Task Tracking", description: ""}
+    {
+        menuName: "Invoices",
+        description: "Get paid faster with invoicing, online payments and more",
+        icon: "./images/invoice_icon.svg"
+    },
+    {
+        menuName: "Proposals",
+        description: "Create client-winning proposals with open receipts, custom packages and electronic approvals",
+        icon: "./images/quote_icon.svg"
+    },
+    {
+        menuName: "Contracts",
+        description: "Protect your business with fully-customizable contract templates. Edit and e-sign hassle free.",
+        icon: "./images/contract_icon.svg"
+    },
+    {
+        menuName: "Client CRM",
+        description: "Add leads, manage existing clients and track projects easily from on place",
+        icon: "./images/client_crm_icon.svg"
+    },
+    {
+        menuName: "Forms & Automations",
+        description: "Boost client intake and automate feedback with custom web forms and questionnaires",
+        icon: "./images/forms_&_automation_icon.svg"
+    },
+    {
+        menuName: "Time Tracking",
+        description: "Stay organized with Bonsai's all-in-one time-tracker, automated time sheets and billing system",
+        icon: "./images/scope_of_work_icon.svg"
+    },
+    {
+        menuName: "Accounting",
+        description: "Manage your finances easily with income reports, expense tracking, tax reminders and more",
+        icon: "./images/accounting_icon.svg"
+    },
+    {
+        menuName: "Task Tracking",
+        description: "Stress-free management with projest templates and integrated timesheets",
+        icon: "./images/task_tracking_icon.svg"
+    }
 ];
 
 const templateListItems = [
@@ -91,12 +123,12 @@ export default DesktopNavMenu
 
 function ProductItem() {
     return (
-        <div className="hidden w-md bg-white group-hover/nav-items:block absolute top-full -translate-x-1/2 z-40">
+        <div className="hidden w-sm bg-white group-hover/nav-items:block absolute top-full -translate-x-1/2 z-40">
             {productListItem.map((productItem, index) => {
                 return (
                     <div key={index} className="group/workflow-arrow-icon group/workflow-submenu flex justify-between items-center hover:bg-gray-300 p-4 relative">
                         <div className="flex flex-col gap-2">
-                            <h3 className="text-2xl">
+                            <h3 className="text-xl">
                                 {productItem.productName}
                             </h3>
                             <p className="text-base">
@@ -118,15 +150,21 @@ function ProductItem() {
     );
 }
 
-function BonsaiWorkflowSubMenu () {
+function BonsaiWorkflowSubMenu() {
     return (
-        <div className="bg-white hidden grid-cols-2 group-hover/workflow-submenu:grid absolute left-full w-xl z-50">
+        <div className="bg-white hidden grid-cols-2 gap-2 p-2 group-hover/workflow-submenu:grid absolute top-0 left-full w-xl z-50">
             {bonsaiWorkflowSubMenu.map((subMenu, index) => {
                 return (
-                    <div key={index}>
-                        <span>
-                            {subMenu.menuName}
-                        </span>
+                    <div key={index} className="flex flex-col p-4 hover:bg-gray-300 rounded-md">
+                        <div className="flex items-center gap-2">
+                            <img className="h-6" src={subMenu.icon} alt="submenu icon" />
+                            <span className="text-sm text-[#4c4d5f]">
+                                {subMenu.menuName}
+                            </span>
+                        </div>
+                        <p className="text-xs text-gray-500 pl-7">
+                            {subMenu.description}
+                        </p>
                     </div>
                 );
             })}
